@@ -1,0 +1,98 @@
+/*---------- INCLUDES ----------*/
+
+
+/*---------- VARIABELN ----------*/
+
+
+/*------- FARBEN -------*/
+$bg-color: #F3F1E9;
+$p-color: #1C2112;
+$s-color: #819C4B;
+$y-color: #ffc857;
+
+/*------- FONT -------*/
+
+html {
+    p {
+        font-size: 20px;
+        line-height: 2;
+    }
+
+}
+
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1 {
+    font-family: base-12-sans, sans-serif;
+    font-weight: 400;
+    font-size: 8rem;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: base-9-sans, sans-serif;
+    font-weight: 400;
+    font-size: 4rem;
+    font-style: italic;
+    text-transform: uppercase
+}
+
+
+
+
+
+
+/*---------- MIXINS ----------*/
+@mixin color-schema {
+    color: $p-color;
+    background: $bg-color
+}
+
+@mixin color-schema-negative {
+    color: $bg-color;
+    background: $p-color;
+}
+
+
+
+/*---------- GRIDS ----------*/
+
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    @include color-schema;
+}
+
+main {
+    margin-left: 25vw;
+    max-width: 50%;
+
+}
+
+.sidenav-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 5vw;
+    z-index: 1;
+    @include color-schema-negative
+}
+
+.sidenav-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20vw;
+    z-index: 1;
+    @include color-schema-negative;
+}
