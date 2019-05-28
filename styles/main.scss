@@ -1,53 +1,29 @@
-/*---------- MIXINS ----------*/
-@mixin color-schema {
-    color: $p-color;
-    background: $bg-color
-}
+@import 'helpers';
+@import 'startseite';
+@import 'animation';
+@import 'loader';
 
-@mixin color-schema-negative {
-    color: $bg-color;
-    background: $p-color;
-}
-
-/*---------- INCLUDES ----------*/
-
-
-/*---------- VARIABELN ----------*/
-
-$size-sidebar-left: 23%;
-$size-sidebar-right: 7%;
-$size-margin-left-main: 15%;
-
-$image-width: 22%;
-
-
-/*------- FARBEN -------*/
-$bg-color: #F3F1E9;
-$p-color: #1C2112;
-$s-color: #819C4B;
-$y-color: #ffc857;
-
-/*------- FONT -------*/
+/*--------------- FONT ---------------*/
 
 html {
+    overflow-y: scroll;
 
 p, a, ol, ul, li {
-    font-size: 18px;
     line-height: 1.5;
-    font-family: zeitung, sans-serif;
-    font-weight: 300;
-    font-style: normal;
     color: $p-color;
     }
 
 strong {
-    font-size: 18px;
-    line-height: 1.5;
-    font-family: zeitung, sans-serif;
     font-weight: 400;
-    font-style: normal;
-    color: $p-color;
 }    
+}
+
+body {
+    font-size: 18px;
+    font-family: zeitung, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    background: $bg-color;
 }
 
 
@@ -68,42 +44,36 @@ h2 {
     color: $s-color;
 }
 
-
 h2, h3, h4 {
     margin: 0 0 1.5rem 0;
 }
 
 
-.clickable-div {
-    display: block;
-    height: 100%;
-}
-
-
-
-/*---------- GRIDS ----------*/
+/*--------------- GRIDS ---------------*/
 .grid-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto 6vh auto 1vh auto 6vh auto 6vh auto auto auto 6vh auto 1vh auto 6vh auto 1vh auto 1vh auto;
+    grid-template-rows: auto 6vh auto 1vh auto 6vh auto 6vh auto auto auto 6vh auto 1vh auto 6vh auto 6vh auto 1vh auto;
     grid-row-gap: 15px;
     grid-column-gap: 15px;
 
 }
 
-#item {
+/*.item {
     border: solid 2px $s-color;
     padding: 1rem;
-}
+}*/
+
 .item-1 {
     grid-column: 3/6;
     grid-row: 1;
     text-align: center;
 }
 .item-2 {
-    grid-column: 1/3;
+    grid-column: 1/4;
     grid-row: 3/4;
     text-align: left;
+    padding-right: 50px;
 }
 .item-3 {
     grid-column: 2/7;
@@ -111,7 +81,7 @@ h2, h3, h4 {
     text-align: left;
 }
 .item-4 {
-    grid-column: 3/6;
+    grid-column: 2/6;
     grid-row: 7/8;
     text-align: left;
 }
@@ -121,10 +91,10 @@ h2, h3, h4 {
     text-align: left;
 }
 .item-6 {
-    grid-column: 3/5;
+    grid-column: 3/6;
     grid-row: 10/11;
     text-align: left;
-    text-align: right;
+    padding: 2rem;
     background: $bg-color;
 }
 .item-7 {
@@ -153,44 +123,44 @@ h2, h3, h4 {
 
 
 
-/*---------- LAYOUT ----------*/
+/*--------------- LAYOUT ---------------*/
 .container {
     position: relative;
     width: 100%;
-    min-height: 100vh;
     @include color-schema;
 }
 
-main {
+.main-padding {
     padding: 15vh 15px 10vh;
 
 }
 
-.l-main {
+.main-margin {
     margin-left: $size-sidebar-left + $size-margin-left-main;
     max-width: 100 - $size-sidebar-left - $size-sidebar-right - $size-margin-left-main - 5;
 }
 
-.sidenav-right {
+
+
+/*--------------- NAV ---------------*/
+#sidenav-right {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     width: $size-sidebar-right;
-    z-index: 1;
+    z-index: 9;
     @include color-schema-negative;
-    transition: all 2s ease-out;
 }
 
-.sidenav-left {
+#sidenav-left {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     width: $size-sidebar-left;
-    z-index: 1;
+    z-index: 9;
     @include color-schema-negative;
-    transition: all 2s ease-out;
 }
 
 .nextpage-left {
@@ -200,7 +170,7 @@ main {
     top: 90vh;
     width: 65px;
     height: 20px;
-    z-index: 2;
+    z-index: 10;
 }
 
 .nextpage-right {
@@ -210,12 +180,18 @@ main {
     top: 90vh;
     width: 65px;
     height: 20px;
-    z-index: 2;
+    z-index: 10;
+}
+
+.clickable-div {
+    display: block;
+    height: 100%;
+    z-index: 10;
 }
 
 
 
-/*---------- IMAGES ----------*/
+/*--------------- IMAGES ---------------*/
 
 img {
     width: 100%;
@@ -224,10 +200,21 @@ img {
 
 .main-image {
     position: fixed;
+    top: 16%;
     left: $size-sidebar-left - ($image-width / 2);
     width: $image-width;
     height: auto;
-    z-index: 3;
+    z-index: 99;
+
+}
+
+.main-image-quadrat {
+    position: fixed;
+    top: 16%;
+    left: $size-sidebar-left - ($image-width / 2);
+    width: $image-width;
+    height: auto;
+    z-index: 99;
 
 }
 
@@ -238,9 +225,20 @@ img {
 }
 
 
-
-/*---------- PADDING MARGIN ----------*/
+/*--------------- PADDING MARGIN ---------------*/
 
 .header-txt {
     margin-bottom: 10vh;
+}
+
+
+
+
+.testclass {
+    position: absolute;
+    width: 67%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-63%, -55%);
 }

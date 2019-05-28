@@ -1,0 +1,44 @@
+.loader-forward {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    z-index: 99;
+    background: $p-color;
+
+}
+
+.loader-forward-nextpage {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    background: $p-color;
+
+}
+
+
+.loader-back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: $size-sidebar-left;
+    z-index: 8;
+    background: $p-color;
+}
+
+
+.loader-back-nextpage {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    background: $p-color;
+
+}

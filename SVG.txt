@@ -1,0 +1,196 @@
+<svg id="svghome" class="svghomeclass" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1514.27 417.1">
+  <defs>
+    <style>
+      
+      body {
+        background: #F3F1E9;
+      }
+    
+:root {
+   --animation-duration: 0.5s;
+   --animation-duration-level1-dach: 1s;
+   --animation-delay-dach1: 1.5s;
+   --animation-delay-level2: 2s;
+   --animation-delay-dach2: 3s;
+  
+
+
+}
+
+    
+    
+.cls-1 {
+    fill: none;
+    stroke: #D5DBC9;
+    stroke-miterlimit: 20;
+    stroke-width: 4px;
+  }
+  
+  
+  .line-1l-m {
+         stroke-dasharray: 285;
+   stroke-dashoffset: 285;
+
+   animation: level1-m var(--animation-duration)0.5s ease forwards;
+  }
+  
+    .line-1l-l {
+      
+   stroke-dasharray: 161;
+   stroke-dashoffset: 161;
+   animation: level1-l var(--animation-duration) ease forwards;
+  }
+  
+  
+    .line-1l-r {
+      
+    stroke-dasharray: 195;
+   stroke-dashoffset: 195;
+   animation: level1-r var(--animation-duration) 1s ease forwards; 
+    
+  }
+  
+  
+    .line-1l-dach {
+      
+    stroke-dasharray: 1540;
+   stroke-dashoffset: 1540;
+      animation: level1-dach var(--animation-duration-level1-dach) var(--animation-delay-dach1) ease forwards; 
+    
+  }
+  
+    .line-2l-m {
+   stroke-dasharray: 104;
+   stroke-dashoffset: 104;
+      animation: level2-m var(--animation-duration) var(--animation-delay-level2) ease forwards; 
+    
+  }
+  
+    .line-2l-r {
+       stroke-dasharray: 98;
+   stroke-dashoffset: 98;
+      animation: level2-r var(--animation-duration) var(--animation-delay-level2) ease forwards; 
+  }
+  
+    .line-2l-l {
+       stroke-dasharray: 61;
+   stroke-dashoffset: 61;
+      animation: level2-l var(--animation-duration) var(--animation-delay-level2) ease forwards; 
+  }
+  
+    .line-2l-dach {
+       stroke-dasharray: 823;
+   stroke-dashoffset: 823;
+      animation: level2-dach var(--animation-duration) ease forwards; 
+  }
+  
+  
+
+@keyframes level1-r {
+  from {
+    
+  }
+  
+  to {
+    stroke-dasharray: 195;
+   stroke-dashoffset: 0;
+  }
+  }
+ 
+@keyframes level1-m {
+  from {
+
+  }
+  
+  to {
+   stroke-dasharray: 285;
+   stroke-dashoffset: 0;
+  }
+  }
+      
+@keyframes level1-l {
+  from {
+
+  }
+  
+  to {
+   stroke-dasharray: 161;
+   stroke-dashoffset: 0;
+  }
+  }     
+      
+      
+ @keyframes level1-dach {
+  from {
+
+  }
+  
+  to {
+   stroke-dasharray: 1540;
+   stroke-dashoffset: 0;
+  }
+  }      
+      
+   
+    @keyframes level2-r {
+  from {
+
+  }
+  
+  to {
+   stroke-dasharray: 98;
+   stroke-dashoffset: 0;
+  }
+  }    
+      
+      
+      
+         
+    @keyframes level2-m {
+  from {
+
+  }
+  
+  to {
+   stroke-dasharray: 104;
+   stroke-dashoffset: 0;
+  }
+  }  
+      
+         
+    @keyframes level2-l {
+  from {
+
+  }
+  
+  to {
+   stroke-dasharray: 61;
+   stroke-dashoffset: 0;
+  }
+  }  
+      
+      
+    @keyframes level2-dach {
+  from {
+
+  }
+  
+  to {
+   stroke-dasharray: 823;
+   stroke-dashoffset: 0;
+  }
+  }  
+        
+
+  
+    </style>
+  </defs>
+ <line class="line-1l-m cls-1" x1="575.85" y1="380.7" x2="575.85" y2="95.74"/>
+  <line class="line-1l-l cls-1" x1="3.5" y1="409.81" x2="5.92" y2="249.14"/>
+  <line class="line-1l-r cls-1" x1="1509.56" y1="417.08" x2="1510.77" y2="222.46"/>
+  <polyline class="line-1l-dach cls-1" points="3.69 252.08 575.85 95.74 1513.69 226.08"/>
+  <line class="line-2l-m cls-1" x1="659.52" y1="107.26" x2="658.69" y2="3.58"/>
+  <line class="line-2l-r cls-1" x1="1140.93" y1="172.74" x2="1140.93" y2="75.73"/>
+  <line class="line-2l-l cls-1" x1="344.24" y1="158.19" x2="344.24" y2="97.56"/>
+  <polyline class="line-2l-dach cls-1" points="1143.69 79.08 658.31 3.58 341.69 101.08"/>
+</svg>

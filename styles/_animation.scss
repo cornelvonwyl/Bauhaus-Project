@@ -1,0 +1,367 @@
+/*---------- PAGE CHANGE ----------*/
+
+/*---------- PAGE FORWARD PART 1 SEITE ----------*/
+.change-page-forward {
+    animation: change-page-forward-animation $page-change-duration ease;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes change-page-forward-animation {
+
+    100% {
+        width: 100%;
+        right: 0;
+    }
+}
+
+/*---------- PAGE FORWARD PART 2 SEITE ----------*/
+.change-page-forward2 {
+    animation: change-page-forward-animation2 $page-change-duration ease;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes change-page-forward-animation2 {
+
+
+
+    100% {
+        right: 100 - $size-sidebar-left;
+        width: 100%;
+        visibility: hidden;
+    }
+}
+
+
+/*---------- PAGE BACK PART 1 SEITE ----------*/
+.change-page-back {
+    animation: change-page-forward-animation $page-change-duration ease;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes change-page-back-animation {
+
+    100% {
+        width: 100%;
+    }
+}
+
+/*---------- PAGE BACK PART 2 SEITE ----------*/
+.change-page-back2 {
+    animation: change-page-back-animation2 $page-change-duration ease;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes change-page-back-animation2 {
+
+
+
+    100% {
+
+        width: $size-sidebar-right;
+        right: 0;
+        visibility: hidden;
+    }
+}
+
+
+/*---------- RIGHT BUTTON FLY IN ----------*/
+
+.flyin-animation-right {
+    animation: far 0.3s ease-out $page-change-duration + $animation-delay-button forwards,
+        bounceit 2s ease $page-change-duration + $animation-delay-button + 0.3s;
+    opacity: 0;
+}
+
+.flyin-animation-right-home {
+    animation: far 0.3s ease-out $page-change-duration + $animation-delay-button-home forwards,
+        bounceit 2s ease $page-change-duration + $animation-delay-button-home + 0.3s;
+    opacity: 0;
+}
+
+@keyframes far {
+    from {
+        left: 100%;
+        opacity: 0.5;
+    }
+
+    to {
+        left: 0%;
+        opacity: 1;
+    }
+}
+
+/*---------- LEFT BUTTON FLY IN ----------*/
+.flyin-animation-left-button {
+    animation: falb 0.3s ease-out $page-change-duration + $animation-delay-button forwards,
+        bounceit 2s ease $page-change-duration + $animation-delay-button + 0.3s;
+    opacity: 0;
+}
+
+@keyframes falb {
+    from {
+        right: 100%;
+        opacity: 0.5;
+    }
+
+    to {
+        right: 0%;
+        opacity: 1;
+    }
+}
+
+/*---------- IMAGE FLY IN ----------*/
+.flyin-animation-left-image {
+    animation: fali 0.3s ease-out $page-change-duration + 0.1 forwards;
+    opacity: 0;
+
+}
+
+@keyframes fali {
+    from {
+        top: -55%;
+        opacity: 0.5;
+    }
+
+    to {
+        top: 16%;
+        opacity: 1;
+    }
+}
+
+
+/*---------- NAV IS BOUNCING ----------*/
+@keyframes bounceit {
+
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -7px, 0);
+    }
+
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
+
+/*---------- SVG ANIMATION ----------*/
+
+
+/*---------- VARIABLES ----------*/
+
+$animation-duration: 0.6s;
+$animation-duration-level1-dach: 1.2s;
+$animation-delay-dach1: 0.9s;
+$animation-delay-level2: 2s;
+$animation-delay-dach2: 3s;
+
+$overalldelay: 0.6s;
+
+$timing-function: ease;
+
+
+$storke-dicke: 6px;
+
+
+
+
+.cls-1 {
+    fill: none;
+    stroke: $p-color;
+    stroke-miterlimit: 20;
+    stroke-width: 0px;
+}
+
+
+
+
+.line-1l-m {
+    stroke-dasharray: 285;
+    stroke-dashoffset: 285;
+
+    animation: level1-m $animation-duration 0.15s+$overalldelay $timing-function forwards;
+}
+
+.line-1l-l {
+
+    stroke-dasharray: 161;
+    stroke-dashoffset: 161;
+    animation: level1-l $animation-duration $overalldelay $timing-function forwards;
+}
+
+
+.line-1l-r {
+
+    stroke-dasharray: 195;
+    stroke-dashoffset: 195;
+    animation: level1-r $animation-duration 0.3s+$overalldelay $timing-function forwards;
+
+}
+
+
+.line-1l-dach {
+
+    stroke-dasharray: 1540;
+    stroke-dashoffset: 1540;
+    animation: level1-dach $animation-duration-level1-dach 0.6s+$overalldelay $timing-function forwards;
+
+}
+
+.line-2l-m {
+    stroke-dasharray: 104;
+    stroke-dashoffset: 104;
+    animation: level2-m $animation-duration 1.65s+$overalldelay $timing-function forwards;
+
+}
+
+.line-2l-r {
+    stroke-dasharray: 98;
+    stroke-dashoffset: 98;
+    animation: level2-r $animation-duration 1.5s+$overalldelay $timing-function forwards;
+}
+
+.line-2l-l {
+    stroke-dasharray: 61;
+    stroke-dashoffset: 61;
+    animation: level2-l $animation-duration 1.8s+$overalldelay $timing-function forwards;
+}
+
+.line-2l-dach {
+    stroke-dasharray: 823;
+    stroke-dashoffset: 823;
+    animation: level2-dach 0.8s 2.1s+$overalldelay $timing-function forwards;
+}
+
+
+
+@keyframes level1-r {
+    from {
+        opacity: 0;
+        stroke-width: 0px;
+    }
+
+    to {
+        stroke-dasharray: 195;
+        stroke-dashoffset: 0;
+        stroke-width: $storke-dicke;
+    }
+}
+
+@keyframes level1-m {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        stroke-dasharray: 285;
+        stroke-dashoffset: 0;
+        stroke-width: $storke-dicke;
+    }
+}
+
+@keyframes level1-l {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        stroke-dasharray: 161;
+        stroke-dashoffset: 0;
+        stroke-width: $storke-dicke;
+    }
+}
+
+
+@keyframes level1-dach {
+    from {
+
+        stroke-width: $storke-dicke;
+    }
+
+    to {
+        stroke-dasharray: 1540;
+        stroke-dashoffset: 0;
+        stroke-width: $storke-dicke;
+    }
+}
+
+
+@keyframes level2-r {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        stroke-dasharray: 98;
+        stroke-dashoffset: 0;
+        stroke-width: $storke-dicke;
+    }
+}
+
+
+
+
+@keyframes level2-m {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        stroke-dasharray: 104;
+        stroke-dashoffset: 0;
+        stroke-width: $storke-dicke;
+    }
+}
+
+
+@keyframes level2-l {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        stroke-dasharray: 61;
+        stroke-dashoffset: 0;
+        stroke-width: $storke-dicke;
+    }
+}
+
+
+@keyframes level2-dach {
+    from {
+        opacity: 0;
+        stroke-width: $storke-dicke;
+    }
+
+    to {
+        opacity: 1;
+        stroke-dasharray: 823;
+        stroke-dashoffset: 0;
+        stroke-width: $storke-dicke;
+    }
+}

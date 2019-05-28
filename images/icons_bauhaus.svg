@@ -1,0 +1,29 @@
+<svg id="svghome" class="svghomeclass" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1514.27 417.1">
+  <defs>
+    <style>
+      
+
+
+    
+    
+.cls-1 {
+    fill: none;
+    stroke: #D5DBC9;
+    stroke-miterlimit: 20;
+    stroke-width: 4px;
+  }
+
+        
+
+  
+    </style>
+  </defs>
+ <line class="line-1l-m cls-1" x1="575.85" y1="380.7" x2="575.85" y2="95.74"/>
+  <line class="line-1l-l cls-1" x1="3.5" y1="409.81" x2="5.92" y2="249.14"/>
+  <line class="line-1l-r cls-1" x1="1509.56" y1="417.08" x2="1510.77" y2="222.46"/>
+  <polyline class="line-1l-dach cls-1" points="3.69 252.08 575.85 95.74 1513.69 226.08"/>
+  <line class="line-2l-m cls-1" x1="659.52" y1="107.26" x2="658.69" y2="3.58"/>
+  <line class="line-2l-r cls-1" x1="1140.93" y1="172.74" x2="1140.93" y2="75.73"/>
+  <line class="line-2l-l cls-1" x1="344.24" y1="158.19" x2="344.24" y2="97.56"/>
+  <polyline class="line-2l-dach cls-1" points="1143.69 79.08 658.31 3.58 341.69 101.08"/>
+</svg>

@@ -1,0 +1,15 @@
+@keyframes change-page-forward-animation {
+ 
+    50% {
+        width: 100%;
+        right: 0;
+    }
+
+
+
+    100% {
+        right: 100 - $size-sidebar-left;
+        width: 100%;
+        visibility: hidden;
+    }
+}

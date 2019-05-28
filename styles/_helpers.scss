@@ -1,0 +1,40 @@
+
+/*---------- MIXINS ----------*/
+@mixin color-schema {
+    color: $p-color;
+    background: $bg-color
+}
+
+@mixin color-schema-negative {
+    color: $bg-color;
+    background: $p-color;
+}
+
+
+/*---------- VARIABELN ----------*/
+/*----- SIZES -----*/
+$size-sidebar-left: 23%;
+$size-sidebar-right: 7%;
+$size-margin-left-main: 15%;
+$image-width: 22%;
+
+/*----- ANIMATION DURATION -----*/
+$page-change-duration: 0.8s;
+$animation-delay-button: 0.5s; 
+
+$animation-delay-button-home: 3.4s; 
+
+
+/*---------- FARBEN ----------*/
+$bg-color: #F3F1E9;
+$p-color: #1C2112;
+$s-color: #819C4B;
+$y-color: #ffc857;
+
+
+
+/*---------- HELPERS ----------*/
+.displaynone {
+    display: none;
+}
+
