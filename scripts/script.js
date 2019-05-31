@@ -4,11 +4,6 @@
 */
 
 
-
-
-
-
-
 /*------------ SEITEN NAVIGATION VORWÄRTS PART 1 ------------*/
 var WhenButtonRightClicked = document.querySelector(".nextpage-right");
 WhenButtonRightClicked.addEventListener("click", function () {
@@ -17,10 +12,10 @@ WhenButtonRightClicked.addEventListener("click", function () {
 
     localStorage.setItem("whichAnimation", "fromright");
 
-    const GetClassesToRemove = document.querySelectorAll(".nextpage-left, .nextpage-right, .main-image");
+    /*const GetClassesToRemove = document.querySelectorAll(".nextpage-left, .nextpage-right, .main-image");
     for (let i = 0; i < GetClassesToRemove.length; i++) {
-        GetClassesToRemove[i].classList.add("displaynone");
-    }
+        GetClassesToRemove[i].classList.add("displaynone-button-image");
+    }*/
 });
 
 
@@ -36,7 +31,7 @@ WhenButtonLeftClicked.addEventListener("click", function () {
 
     const GetClassesToRemove = document.querySelectorAll(".nextpage-left, .nextpage-right, .main-image");
     for (let i = 0; i < GetClassesToRemove.length; i++) {
-        GetClassesToRemove[i].classList.add("displaynone");
+        GetClassesToRemove[i].classList.add("displaynone-button-image");
     }
 });
 
@@ -86,5 +81,114 @@ if (localStorage.getItem("whichAnimation") === "fromleft") {
 
 
 
+/*window.addEventListener('scroll', () => {
+    if (isElementInViewport(tryout)) {
+        const animationfire = document.querySelector("#tryout");
+        animationfire.classList.add("resize");
+    }
+  })
 
 
+
+function isElementInViewport (el) {
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+
+
+}*/
+
+/*
+window.addEventListener('scroll', () => {
+    if (isElementInViewport(tryout)) {
+        var animationfire = document.querySelectorAll(".loadanimation");
+
+        for(let i = 0; i < animationfire.length; i++){
+        animationfire[i].classList.add("loadandanimationit");
+        }
+    }
+  })
+
+
+
+function isElementInViewport (.el) {
+
+   for(let i = 0; i < 100; i++){
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+
+}
+}*/
+
+
+window.addEventListener('scroll', () => {
+   for (let x = 0; x < positions.length; x++){
+    if (positions[x] < 0) {
+        var animationfire = document.querySelectorAll(".loadanimation");
+
+        for(let i = 0; i < animationfire.length; i++){
+        animationfire[i].classList.add("loadandanimationit");
+        }
+    }
+}
+  })
+
+
+
+  var apps = document.querySelectorAll(".loadanimation"),
+  positions = [];
+
+Array.prototype.forEach.call(apps, function (app, index) {
+  var positionInfo = app.getBoundingClientRect();
+
+  positions.push(positionInfo);
+  console.log(index + ":" + positionInfo.top + ":" + positionInfo.left);
+});
+
+console.log(positions);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+var rect = document.querySelector(".loadanimation").getBoundingClientRect();
+
+let top1 = rect.top;
+let bottom = rect.bottom;
+
+if (rect.top > 20) {
+    rect.classList.add("loadandanimationit")
+}
+
+console.log(rect);*/
+
+
+
+/*
+window.addEventListener("scroll", () => {
+    if (top1 > 0) {
+        const animationfire = document.querySelector("#tryout");
+        animationfire.classList.add("resize");
+    }
+})*/

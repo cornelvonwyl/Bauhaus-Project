@@ -10,6 +10,11 @@
     background: $p-color;
 }
 
+@mixin hover-transition($delay) {
+    transition: all 0.5s cubic-bezier(.69,.33,.32,.71);
+    transition-delay: $delay;
+}
+
 
 /*---------- VARIABELN ----------*/
 /*----- SIZES -----*/
@@ -18,11 +23,14 @@ $size-sidebar-right: 7%;
 $size-margin-left-main: 15%;
 $image-width: 22%;
 
+
+$max-width-personen: 65%;
+
 /*----- ANIMATION DURATION -----*/
 $page-change-duration: 0.8s;
 $animation-delay-button: 0.5s; 
 
-$animation-delay-button-home: 3.4s; 
+$animation-delay-button-home: 3s; 
 
 
 /*---------- FARBEN ----------*/
@@ -37,4 +45,14 @@ $y-color: #ffc857;
 .displaynone {
     display: none;
 }
+
+.displaynone-button-image {
+    display: none;
+}
+
+.smallh3 {
+    font-size: 2rem !important;
+
+}
+
 

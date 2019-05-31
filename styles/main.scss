@@ -1,15 +1,25 @@
 @import 'helpers';
 @import 'startseite';
+@import 'personen_projekte';
 @import 'animation';
 @import 'loader';
 
+
+#tryout {
+    transition: all 3s ease;
+}
+
+.resize {
+    font-size: 3rem !important;
+}
 /*--------------- FONT ---------------*/
 
 html {
     overflow-y: scroll;
+    font-size: 18px;
 
 p, a, ol, ul, li {
-    line-height: 1.5;
+    line-height: 1.5; 
     color: $p-color;
     }
 
@@ -19,7 +29,7 @@ strong {
 }
 
 body {
-    font-size: 18px;
+
     font-family: zeitung, sans-serif;
     font-weight: 200;
     font-style: normal;
@@ -36,6 +46,14 @@ h1 {
 }
 
 h2 {
+    font-family: base-12-sans, sans-serif;
+    font-weight: 400;
+    font-size: 4vw;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+h3 {
     font-family: base-9-sans, sans-serif;
     font-weight: 400;
     font-size: 2.1vw;
@@ -44,12 +62,24 @@ h2 {
     color: $s-color;
 }
 
-h2, h3, h4 {
+h2 {
+    margin: 0 0 0.5rem 0;
+}
+
+h4 {
+    font-family: zeitung, sans-serif;
+    font-weight: 400;
+    font-size: 1.5vw;
+    color: $bg-color;
+}
+
+h3 {
     margin: 0 0 1.5rem 0;
 }
 
 
 /*--------------- GRIDS ---------------*/
+/*------------ GRID ENTDECKEN ------------*/
 .grid-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -121,7 +151,76 @@ h2, h3, h4 {
     grid-row: 21/22;
 }
 
+/*------------ GRID PERSONEN ------------*/
+.container-personen {
+    p {
+        font-size: 1.4rem;
+        width: 75%;
+    }
+}
 
+.grid-container-personen {
+    display: grid;
+    grid-template-columns: 32% auto;
+    grid-template-rows: auto;
+    grid-row-gap: 8rem;
+    grid-column-gap: 100/60*3%;
+
+    p {
+        font-size: 1.1rem;
+        padding-left: 1rem;
+        width: 90%;
+    }
+
+
+    .img-item {
+    grid-column: 1/2;
+    grid-row: auto;
+
+    }
+
+    .text-item {
+        grid-column: 2/3;
+        grid-row: auto;
+        align-items: center;
+        align-self: center;
+    }
+}
+
+/*------------ GRID Projekte ------------*/
+.grid-container-projekte {
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: auto;
+    grid-row-gap: 8rem;
+    grid-column-gap: 5%;
+    justify-content: center;
+
+    .overlay-grid {
+        display: grid;
+        grid-template-columns: 40% 20% 20%;
+        grid-template-rows: auto;
+        grid-column-gap: 5%;
+    }
+
+    .grid-text {
+        grid-column: 1/2;
+        grid-row: auto;
+    }
+
+    .grid-bild1 {
+        grid-column: 2/3;
+        grid-row: auto;
+    }
+
+    .grid-bild2 {
+        padding-top: 3rem;
+        grid-column: 3/4;
+        grid-row: auto;
+    }
+
+
+}
 
 /*--------------- LAYOUT ---------------*/
 .container {
@@ -131,13 +230,20 @@ h2, h3, h4 {
 }
 
 .main-padding {
-    padding: 15vh 15px 10vh;
+    padding: 15vh 0 10vh;
 
 }
 
 .main-margin {
     margin-left: $size-sidebar-left + $size-margin-left-main;
     max-width: 100 - $size-sidebar-left - $size-sidebar-right - $size-margin-left-main - 5;
+    padding-top: 5vh;
+}
+
+.main-margin-personen {
+    margin-left: $size-sidebar-left + 5%;
+    max-width: 60%;
+    padding-top: 13vh;
 }
 
 
@@ -171,6 +277,7 @@ h2, h3, h4 {
     width: 65px;
     height: 20px;
     z-index: 10;
+
 }
 
 .nextpage-right {
@@ -181,6 +288,7 @@ h2, h3, h4 {
     width: 65px;
     height: 20px;
     z-index: 10;
+
 }
 
 .clickable-div {
@@ -200,7 +308,6 @@ img {
 
 .main-image {
     position: fixed;
-    top: 16%;
     left: $size-sidebar-left - ($image-width / 2);
     width: $image-width;
     height: auto;
@@ -209,20 +316,19 @@ img {
 }
 
 .main-image-quadrat {
-    position: fixed;
-    top: 16%;
-    left: $size-sidebar-left - ($image-width / 2);
-    width: $image-width;
-    height: auto;
-    z-index: 99;
 
-}
-
-.main-image-round {
-    border-radius: 50%;
     box-shadow: 3px 3px 5px 0px #1c2112a8;
 
 }
+
+
+.main-image-round {
+
+    box-shadow: 3px 3px 5px 0px #1c2112a8;
+
+}
+
+
 
 
 /*--------------- PADDING MARGIN ---------------*/

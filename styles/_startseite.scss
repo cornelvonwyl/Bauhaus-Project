@@ -9,7 +9,15 @@
 }
 
 
-.huge-title-h2 {
+.huge-title-h3 {
     font-size: 3rem;
 }
 
+
+.main-padding-startseite {
+    .main-margin {
+        margin-left: $size-sidebar-left + $size-margin-left-main;
+        max-width: 100 - $size-sidebar-left - $size-sidebar-right - $size-margin-left-main - 5;
+        padding-top: 0;
+    }
+}

@@ -115,7 +115,7 @@
 
 /*---------- IMAGE FLY IN ----------*/
 .flyin-animation-left-image {
-    animation: fali 0.3s ease-out $page-change-duration + 0.1 forwards;
+    animation: fali 0.3s ease-out $page-change-duration forwards;
     opacity: 0;
 
 }
@@ -127,10 +127,12 @@
     }
 
     to {
-        top: 16%;
+        top: 15vh;
         opacity: 1;
     }
 }
+
+
 
 
 /*---------- NAV IS BOUNCING ----------*/
@@ -169,9 +171,28 @@
 }
 
 
+/*---------- Load Animation ----------*/
+
+.loadandanimationit {
+    animation: la 1s 1s linear forwards;
+    opacity: 0;
+}
+
+
+@keyframes la {
+    from {  
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
 /*---------- SVG ANIMATION ----------*/
-
-
 /*---------- VARIABLES ----------*/
 
 $animation-duration: 0.6s;
@@ -180,7 +201,7 @@ $animation-delay-dach1: 0.9s;
 $animation-delay-level2: 2s;
 $animation-delay-dach2: 3s;
 
-$overalldelay: 0.6s;
+$overalldelay: 0.4s;
 
 $timing-function: ease;
 
@@ -365,3 +386,4 @@ $storke-dicke: 6px;
         stroke-width: $storke-dicke;
     }
 }
+
