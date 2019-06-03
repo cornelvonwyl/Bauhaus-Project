@@ -22,13 +22,13 @@
 }
 
 .huge-title-h1 {
-  font-size: 10rem;
+  font-size: 9vw;
   line-height: 0.85;
   margin-bottom: 1.5rem;
 }
 
 .huge-title-h3 {
-  font-size: 3rem;
+  font-size: 2.7vw;
 }
 
 .main-padding-startseite .main-margin {
@@ -96,7 +96,7 @@
 
 .overlay-text-image .text-positioning p {
   color: white;
-  font-size: 18px !important;
+  font-size: 1rem !important;
   width: 100%;
 }
 
@@ -414,26 +414,38 @@
 
 /*---------- Load Animation ----------*/
 .loadandanimationit {
-  -webkit-animation: la 1s 1s linear forwards;
-          animation: la 1s 1s linear forwards;
+  -webkit-animation: la 0.4s linear forwards;
+          animation: la 0.4s linear forwards;
+  opacity: 0;
+}
+
+.loadanimation {
   opacity: 0;
 }
 
 @-webkit-keyframes la {
   from {
     opacity: 0;
+    -webkit-transform: translate(-15px, 0);
+            transform: translate(-15px, 0);
   }
   to {
     opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 }
 
 @keyframes la {
   from {
     opacity: 0;
+    -webkit-transform: translate(-15px, 0);
+            transform: translate(-15px, 0);
   }
   to {
     opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 }
 
@@ -736,7 +748,7 @@
 /*--------------- FONT ---------------*/
 html {
   overflow-y: scroll;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 html p, html a, html ol, html ul, html li {
@@ -758,7 +770,7 @@ body {
 h1 {
   font-family: base-12-sans, sans-serif;
   font-weight: 400;
-  font-size: 7vw;
+  font-size: 6vw;
   font-style: normal;
   text-transform: uppercase;
 }
@@ -766,7 +778,7 @@ h1 {
 h2 {
   font-family: base-12-sans, sans-serif;
   font-weight: 400;
-  font-size: 4vw;
+  font-size: 3.5vw;
   font-style: normal;
   text-transform: uppercase;
 }
@@ -774,7 +786,7 @@ h2 {
 h3 {
   font-family: base-9-sans, sans-serif;
   font-weight: 400;
-  font-size: 2.1vw;
+  font-size: 2vw;
   font-style: italic;
   text-transform: uppercase;
   color: #819C4B;
@@ -923,7 +935,7 @@ h3 {
 
 /*------------ GRID PERSONEN ------------*/
 .container-personen p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   width: 75%;
 }
 
@@ -1029,16 +1041,23 @@ h3 {
   padding-top: 5vh;
 }
 
+.main-margin-projekte {
+  margin-left: 28%;
+  max-width: 60%;
+  padding-top: 15vh;
+}
+
 .main-margin-personen {
   margin-left: 28%;
   max-width: 60%;
-  padding-top: 13vh;
+  padding-top: 27vh;
 }
 
 /*--------------- NAV ---------------*/
 #sidenav-right {
   position: fixed;
-  top: 0;
+  top: -50vh;
+  height: 200vh;
   right: 0;
   bottom: 0;
   width: 7%;
@@ -1049,7 +1068,8 @@ h3 {
 
 #sidenav-left {
   position: fixed;
-  top: 0;
+  top: -50vh;
+  height: 200vh;
   left: 0;
   bottom: 0;
   width: 23%;
@@ -1062,9 +1082,9 @@ h3 {
   background: #F3F1E9;
   position: absolute;
   right: 0;
-  top: 90vh;
+  top: 140vh;
   width: 65px;
-  height: 20px;
+  height: 15px;
   z-index: 10;
 }
 
@@ -1072,9 +1092,9 @@ h3 {
   background: #F3F1E9;
   position: absolute;
   left: 0;
-  top: 90vh;
+  top: 140vh;
   width: 65px;
-  height: 20px;
+  height: 15px;
   z-index: 10;
 }
 
@@ -1115,11 +1135,11 @@ img {
 
 .testclass {
   position: absolute;
-  width: 67%;
+  width: 77%;
   height: auto;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-63%, -55%);
-          transform: translate(-63%, -55%);
+  -webkit-transform: translate(-58%, -55%);
+          transform: translate(-58%, -55%);
 }
 /*# sourceMappingURL=main.css.map */

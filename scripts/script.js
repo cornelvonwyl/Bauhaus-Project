@@ -131,42 +131,25 @@ function isElementInViewport (.el) {
 }
 }*/
 
+var apps = document.querySelectorAll(".loadanimation"),
+   positions = [];
 
-window.addEventListener('scroll', () => {
-   for (let x = 0; x < positions.length; x++){
-    if (positions[x] < 0) {
-        var animationfire = document.querySelectorAll(".loadanimation");
+window.addEventListener("scroll", (e) => {
+   apps.forEach(function (app, index) {
+       if (isInViewport(app)) {
+           apps[index].classList.add("loadandanimationit");
+       }
+   })
+})
 
-        for(let i = 0; i < animationfire.length; i++){
-        animationfire[i].classList.add("loadandanimationit");
-        }
-    }
-}
-  })
+var isInViewport = function (elem) {
+   var bounding = elem.getBoundingClientRect();
+   return (
+       bounding.top >= 0 &&
+       bounding.bottom <= window.innerHeight + bounding.height
 
-
-
-  var apps = document.querySelectorAll(".loadanimation"),
-  positions = [];
-
-Array.prototype.forEach.call(apps, function (app, index) {
-  var positionInfo = app.getBoundingClientRect();
-
-  positions.push(positionInfo);
-  console.log(index + ":" + positionInfo.top + ":" + positionInfo.left);
-});
-
-console.log(positions);
-
-
-
-
-
-
-
-
-
-
+   );
+};
 
 
 

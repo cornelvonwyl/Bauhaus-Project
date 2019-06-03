@@ -16,7 +16,7 @@
 
 html {
     overflow-y: scroll;
-    font-size: 18px;
+    font-size: 14px;
 
 p, a, ol, ul, li {
     line-height: 1.5; 
@@ -40,7 +40,7 @@ body {
 h1 {
     font-family: base-12-sans, sans-serif;
     font-weight: 400;
-    font-size: 7vw;
+    font-size: 6vw;
     font-style: normal;
     text-transform: uppercase;
 }
@@ -48,7 +48,7 @@ h1 {
 h2 {
     font-family: base-12-sans, sans-serif;
     font-weight: 400;
-    font-size: 4vw;
+    font-size: 3.5vw;
     font-style: normal;
     text-transform: uppercase;
 }
@@ -56,7 +56,7 @@ h2 {
 h3 {
     font-family: base-9-sans, sans-serif;
     font-weight: 400;
-    font-size: 2.1vw;
+    font-size: 2vw;
     font-style: italic;
     text-transform: uppercase;
     color: $s-color;
@@ -154,7 +154,7 @@ h3 {
 /*------------ GRID PERSONEN ------------*/
 .container-personen {
     p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         width: 75%;
     }
 }
@@ -240,10 +240,17 @@ h3 {
     padding-top: 5vh;
 }
 
+.main-margin-projekte {
+    margin-left: $size-sidebar-left + 5%;
+    max-width: 60%;
+    padding-top: 15vh;
+}
+
+
 .main-margin-personen {
     margin-left: $size-sidebar-left + 5%;
     max-width: 60%;
-    padding-top: 13vh;
+    padding-top: 27vh;
 }
 
 
@@ -251,7 +258,8 @@ h3 {
 /*--------------- NAV ---------------*/
 #sidenav-right {
     position: fixed;
-    top: 0;
+    top: -50vh;
+    height: 200vh;
     right: 0;
     bottom: 0;
     width: $size-sidebar-right;
@@ -261,7 +269,8 @@ h3 {
 
 #sidenav-left {
     position: fixed;
-    top: 0;
+    top: -50vh;
+    height: 200vh;
     left: 0;
     bottom: 0;
     width: $size-sidebar-left;
@@ -273,9 +282,9 @@ h3 {
     background: $bg-color;
     position: absolute;
     right: 0;
-    top: 90vh;
+    top: 140vh;
     width: 65px;
-    height: 20px;
+    height: 15px;
     z-index: 10;
 
 }
@@ -284,9 +293,9 @@ h3 {
     background: $bg-color;
     position: absolute;
     left: 0;
-    top: 90vh;
+    top: 140vh;
     width: 65px;
-    height: 20px;
+    height: 15px;
     z-index: 10;
 
 }
@@ -342,9 +351,9 @@ img {
 
 .testclass {
     position: absolute;
-    width: 67%;
+    width: 77%;
     height: auto;
     top: 50%;
     left: 50%;
-    transform: translate(-63%, -55%);
+    transform: translate(-58%, -55%);
 }
