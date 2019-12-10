@@ -1,12 +1,8 @@
 .container-personen {
-
-    .main-image {
-        position: absolute;
-    }
-    
-
+  .main-image {
+    position: absolute;
+  }
 }
-
 
 /*----------- Grünes Overlay -----------*/
 .overlay-static {
@@ -21,75 +17,66 @@
   background-color: rgba($color: $p-color, $alpha: 0);
   border-left: solid 0px $bg-color;
   @include hover-transition(0.3s);
-
 }
 
 .overlay-header-static {
-    position: absolute;
-    bottom: 1vh;
-    left: 2vw;
-    color: $bg-color;
-    margin: 0 0 1rem 0;
-    @include hover-transition(0.3s);
+  position: absolute;
+  bottom: 1vh;
+  left: 2vw;
+  color: $bg-color;
+  margin: 0 0 1rem 0;
+  @include hover-transition(0.3s);
 }
 
-  .overlay-text-image {
+.overlay-text-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+  opacity: 0;
+  @include hover-transition(0.3s);
 
-    opacity: 0;
-    @include hover-transition(0.3s);
-    
-    .text-positioning {
-      position: relative;
-      margin-left: 2vw;
-      opacity: 0;
-      @include hover-transition(0.5s);
-
-      p {
-        color: white;
-        font-size: 1rem !important;
-        width: 100%;
-      }
-
-    }
-
-
-  }
-
-  .img-item {
+  .text-positioning {
     position: relative;
+    margin-left: 2vw;
+    opacity: 0;
+    @include hover-transition(0.5s);
 
-    .overlay-container {
-        position: relative;
-        transition: all 1s ease;
+    p {
+      color: white;
+      font-size: 1rem !important;
+      width: 100%;
     }
+  }
+}
 
-    .overlay-container-effect {
-      transition: all .2s cubic-bezier(.69,.33,.32,.71);
+.img-item {
+  position: relative;
 
-    }
-
+  .overlay-container {
+    position: relative;
+    transition: all 1s ease;
   }
 
-  .overlay-image {
-    max-width: 20px;
-    height: auto;
+  .overlay-container-effect {
+    transition: all 0.2s cubic-bezier(0.69, 0.33, 0.32, 0.71);
   }
-  
+}
+
+.overlay-image {
+  max-width: 20px;
+  height: auto;
+}
+
 /*----------- Hover Effects -----------*/
 .img-item:hover {
-
   .overlay-background-image {
     filter: grayscale(100%);
   }
-  
-  
-    /*.overlay-projekte-left {
+
+  /*.overlay-projekte-left {
       opacity: 1;
       height: 100%;
     }
@@ -100,35 +87,32 @@
       height: 100%;
     }*/
 
-    .overlay-text-image {
-      opacity: 1;
-    }
+  .overlay-text-image {
+    opacity: 1;
+  }
 
-    .text-positioning {
-    opacity: 1;  
+  .text-positioning {
+    opacity: 1;
     margin-top: 13%;
     margin-left: 2vw;
-    }
+  }
 
-   .overlay-container-effect {
-      transform: scale(1.15);
-    }
+  .overlay-container-effect {
+    transform: scale(1.15);
+  }
 
-    .overlay-static {
+  .overlay-static {
     background-color: rgba($color: $p-color, $alpha: 0.85);
     width: 90%;
     height: 85%;
     margin: auto;
     border-left: solid 7px $bg-color;
-
   }
 
+  .overlay-header-static {
+    position: absolute;
+    bottom: 77%;
 
-    .overlay-header-static {
-      position: absolute;
-      bottom: 77%;
-
-      color: $bg-color;
+    color: $bg-color;
   }
-  }
-  
+}
